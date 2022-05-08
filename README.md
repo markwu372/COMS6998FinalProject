@@ -1,4 +1,4 @@
-# -generalization_to_OOD_category_viewpoint_combinations
+# When and How CNN and GAN generalize to Out-of-Distribution Category-Viewpoint Data
 From the paper “When and How CNNs Generalize to Out-Of-Distribution Category-Viewpoint Combinations”, the authors investigated when and how OOD generalization can be by evaluating CNNs trained to classify both object category and 3D viewpoint on OOD combinations, and identified the neural mechanisms that facilitate such OOD generalization. Recent works suggest that CNNs can hardly to generalize OOD category-viewpoint combinations
 
 
