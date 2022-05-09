@@ -10,7 +10,12 @@ When training a DNN, it is often assumed that the training and testing samples a
 
 ## Example commands to execute the code 
 
-This fact may make the GANs more robust when dealing with the OOD problem. Run GAN_mnist_OOD/GAN_mnist.ipynb and GAN_biasedcar_OOD/GAN_biased_car.ipynb
+For CNN experiment on MNIST-Rotation dataset, please run CNN/MNIST_Rotation/CNN_mnist.ipynb
+
+For GAN expriment on MNIST-Rotation dataset and Biased-Car dataset, please run GAN/MNIST_Rotation/GAN_mnist.ipynb and GAN_biased_car.ipynb.
+
+The GAN achitecture code is listed in GAN/MNIST_Rotation: SGAN.py, wgan.py, acgan.py
+
 
 ## Results (including charts/tables) and observations  
 ### Evaluation Criteria
