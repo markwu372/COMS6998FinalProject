@@ -7,6 +7,7 @@ When training a DNN, it is often assumed that the training and testing samples a
 
 ## Description of Repository
 
+
 ## Example commands to execute the code 
 
 This fact may make the GANs more robust when dealing with the OOD problem. Run GAN_mnist_OOD/GAN_mnist.ipynb and GAN_biasedcar_OOD/GAN_biased_car.ipynb
