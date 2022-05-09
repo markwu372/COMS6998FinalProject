@@ -10,7 +10,11 @@ When training a DNN, it is often assumed that the training and testing samples a
 This repository contains source codes for CNN and GAN architectures as well as jupyter notebooks in which we run the models on the datasets.
 
 - `CNN` : how we ran CNN experiments on MNIST-Rotation dataset
-- 
+- `Dataset`: contain all datasets from the original paper
+- `Diagrams`: figures of results and model structures
+- `GAN`: how we ran GAN experiments on both MNIST-Rotation and Biased-Cars datasets
+- `res `: the architectures of GAN models as well as how we visualize the results
+- `utils`: how we download and import the datasets
 
 
 
