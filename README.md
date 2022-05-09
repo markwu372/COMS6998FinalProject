@@ -23,11 +23,14 @@ In the first part of our experiments, different CNNs architectures are tried to 
 ![Alt text](/Diagrams/2.png?raw=true)
 |:--:| 
 | *Figure 1. Different CNN Performances on MNIST-Rotation Set(Separate and Shared)* |
+
+
 We can see Xception and Inception V3 has the relatively better performances among all the shared and separate architectures. The reason might be due to the Depthwise Separable Convolution. Compared with traditional spatial wise convolution, Depth-wise Separable Convolution deals not just with the spatial dimensions, but with the depth dimension — the number of channels — as well. An input image may have 3 channels: RGB. After a few convolutions, an image may have multiple channels. We can imagine each channel as a particular interpretation of that image.In some channels, the category information is stored, while others channels store the viewpoint information. In some channels both category and viewpoint information are stored. By doing Depth-wise separable convolution, we can train category neurons and viewpoint neurons separately, which will not disturb each other. Therefore we can regard Depth-wise Separable Convolution as a variant of ‘Separate’ architecture because they have similar effects, so that the Depth-wise Separable Convolution in Xception and inception V3 can help to improve the performance of predicting OOD combinations.
 
 ![Alt text](/Diagrams/1.png?raw=true)
 |:--:| 
 | *Figure 2. Different GAN Performances on MNIST-Rotation Set(Separate and Shared)* |
+
 We can observe that: 
 - S-GAN has the best performances among GANs while Xception has the best performance among CNNs
 - Among the performance on InD combinations test sets, Xception has a better performance than S-GAN in both ‘separate’ and ‘shared’ architectures.
