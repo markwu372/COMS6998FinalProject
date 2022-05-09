@@ -10,6 +10,8 @@ When training a DNN, it is often assumed that the training and testing samples a
 
 ## Example commands to execute the code 
 
+We modify the official code of the original paper "When and How CNNs Generalize to Out-Of-Distribution Category-Viewpoint Combinations".
+
 For CNN experiment on MNIST-Rotation dataset, please run CNN/MNIST_Rotation/CNN_mnist.ipynb
 
 For GAN expriment on MNIST-Rotation dataset and Biased-Car dataset, please run GAN/MNIST_Rotation/GAN_mnist.ipynb and GAN_biased_car.ipynb.
