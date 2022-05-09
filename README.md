@@ -7,6 +7,10 @@ When training a DNN, it is often assumed that the training and testing samples a
 
 ## Description of Repository
 
+This repository contains source codes for CNN and GAN architectures as well as jupyter notebooks in which we run the models on the datasets.
+
+- `CNN` : how we ran CNN experiments on MNIST-Rotation dataset
+- 
 
 
 
