@@ -20,6 +20,6 @@ We will use the geometric mean of category and viewpoint classification accuracy
 
 ### MNIST-Rotation Dataset
 In the first part of our experiments, different CNNs architectures are tried to explore their performance of Out-Of-Distribution Category-Viewpoint Generalization on MNIST–Rotation dataset (MNIST- Position and MNIST-Scale dataset). MNIST-Rotation was created by placing MNIST images into one of nine possible locations in an empty 3-by-3 grid. Images are resized to one of nine possible sizes followed by zero-padding. Images of the digit 9 were left out in both these datasets, ensuring nine categories and nine viewpoint classes (total of 81 category- viewpoint combinations). We tried ‘Separate’ and ‘Shared’ architectures for category and viewpoint. 
-|![Alt text](/Diagrams/2.png?raw=true)|
+![Alt text](/Diagrams/2.png?raw=true)
 |:--:| 
-| *Different CNN Performances on MNIST-Rotation set(Separate and Shared)* |
+| *Figure 1. Different CNN Performances on MNIST-Rotation set(Separate and Shared)* |
