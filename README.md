@@ -22,4 +22,17 @@ We will use the geometric mean of category and viewpoint classification accuracy
 In the first part of our experiments, different CNNs architectures are tried to explore their performance of Out-Of-Distribution Category-Viewpoint Generalization on MNIST–Rotation dataset (MNIST- Position and MNIST-Scale dataset). MNIST-Rotation was created by placing MNIST images into one of nine possible locations in an empty 3-by-3 grid. Images are resized to one of nine possible sizes followed by zero-padding. Images of the digit 9 were left out in both these datasets, ensuring nine categories and nine viewpoint classes (total of 81 category- viewpoint combinations). We tried ‘Separate’ and ‘Shared’ architectures for category and viewpoint. 
 ![Alt text](/Diagrams/2.png?raw=true)
 |:--:| 
-| *Figure 1. Different CNN Performances on MNIST-Rotation set(Separate and Shared)* |
+| *Figure 1. Different CNN Performances on MNIST-Rotation Set(Separate and Shared)* |
+We can see Xception and Inception V3 has the relatively better performances among all the shared and separate architectures. The reason might be due to the Depthwise Separable Convolution. Compared with traditional spatial wise convolution, Depth-wise Separable Convolution deals not just with the spatial dimensions, but with the depth dimension — the number of channels — as well. An input image may have 3 channels: RGB. After a few convolutions, an image may have multiple channels. We can imagine each channel as a particular interpretation of that image.In some channels, the category information is stored, while others channels store the viewpoint information. In some channels both category and viewpoint information are stored. By doing Depth-wise separable convolution, we can train category neurons and viewpoint neurons separately, which will not disturb each other. Therefore we can regard Depth-wise Separable Convolution as a variant of ‘Separate’ architecture because they have similar effects, so that the Depth-wise Separable Convolution in Xception and inception V3 can help to improve the performance of predicting OOD combinations.
+
+![Alt text](/Diagrams/1.png?raw=true)
+|:--:| 
+| *Figure 2. Different GAN Performances on MNIST-Rotation Set(Separate and Shared)* |
+We can observe that: 
+- S-GAN has the best performances among GANs while Xception has the best performance among CNNs
+- Among the performance on InD combinations test sets, Xception has a better performance than S-GAN in both ‘separate’ and ‘shared’ architectures.
+- Among the performance on OOD combinations in test sets, Xception also has better performance than S-GAN in ‘separate’ architecture, but In the ‘shared’ architecture, S-GAN has a much better performance than Xception.
+We think this may be caused by the fact that, when predicating category-viewpoint on out of distribution data in a separate network, the neurons only focus on either category task or viewpoint task. Since Xception has a more complicated network, it will perform better than SGAN. 
+However, when predicating category-viewpoint on out of distribution data in a shared network, neurons have to focus on both category and viewpoint tasks. Because of the adversarial property during training, the generator may generate images in which category and viewpoint combinations are out of the distribution of the training set, and then the category and viewpoint neurons in the discriminator will then learn from these out of distribution combinations from the generated images. Therefore, S-GAN can perform better than Xception when dealing with out of distribution problems in a shared network.
+
+
